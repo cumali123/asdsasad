@@ -1,0 +1,28 @@
+private bool isPandigital(long n) {
+    int digits = 0;
+    int count = 0;
+    int tmp;
+ 
+    while (n > 0) {
+        tmp = digits;
+        digits = digits | 1 << (int)((n % 10) - 1);
+        if (tmp == digits) {
+            return false;
+        }
+ 
+        count++;
+        n /= 10;
+    }
+    return digits == (1 << count) - 1;
+}
+&#91;/csharp&#93;
+ 
+ 
+private long concat(long a, long b) {
+    long c = b;
+    while (c > 0) {
+        a *= 10;
+        c /= 10;
+    }
+    return a + b;
+}
