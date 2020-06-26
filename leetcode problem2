@@ -1,0 +1,14 @@
+sonuç = ListNode (0) 
+düğüm = sonuç 
+sıcaklığı = 0
+l1 Yok veya l2 Yok veya temp> 0 ise: 
+    l1 Yok değilse: 
+        temp + = l1.val 
+        l1 = l1.l2 
+    Yok ise sonraki: 
+        temp + = l2.val 
+        l2 = l2.sonra
+    node.next = ListNode (geçici% 10)
+    düğüm = node.next
+    temp = temp // 10 
+sonuç döndür. sonraki
