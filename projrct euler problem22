@@ -1,0 +1,9 @@
+f = open("dosya/p022_names.txt")
+metin = f.read().replace('"', '').split(",")
+ans = sum(
+        (i + 1) * (ord(c) - ord('A') + 1)
+          for (i, ad) in enumerate(sorted(metin))
+            for c in ad
+        )
+
+print(ans)
