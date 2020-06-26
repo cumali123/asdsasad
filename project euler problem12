@@ -1,0 +1,21 @@
+# Project euler soru 12 -> cevap: 76576500
+def tamBölenleriniBul(sayı):
+    sayac = 2
+
+    yeniSayı = int(sayı/2)+1
+    for i in range(2,yeniSayı):
+        if sayı%i == 0:
+            sayac+=1
+    return sayac
+
+ucgensayi = 1
+sayac = 2
+while True:
+    ucgensayi+=sayac
+    sayac+=1
+    if ucgensayi%2!=0 or ucgensayi%5!=0:
+        continue
+    print(ucgensayi)
+    if tamBölenleriniBul(ucgensayi)>500:
+        print("Sayı =", ucgensayi)
+        break
